@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML Learning Page - All HTML Elements (Dark Theme)</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: #121212;
+      color: #e0e0e0;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    h1, h2, h3 {
+      color: #58a6ff;
+      margin-top: 2rem;
+    }
+    p {
+      max-width: 700px;
+      color: #ccc;
+    }
+    a {
+      color: #58a6ff;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+    a:hover, a:focus {
+      border-color: #58a6ff;
+      outline: none;
+    }
+    code {
+      background: #2d2d2d;
+      color: #c792ea;
+      padding: 2px 6px;
+      font-family: monospace;
+      border-radius: 4px;
+      user-select: all;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #444;
+      margin: 3rem 0;
+    }
+    ul, ol {
+      max-width: 700px;
+      padding-left: 1.5rem;
+      margin-bottom: 1.5rem;
+      color: #bbb;
+    }
+    dl {
+      max-width: 700px;
+      margin-bottom: 1.5rem;
+      color: #bbb;
+    }
+    dt {
+      font-weight: 700;
+      margin-top: 1rem;
+      color: #ddd;
+    }
+    dd {
+      margin-left: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #ccc;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 700px;
+      margin-bottom: 1.5rem;
+      color: #ddd;
+    }
+    th, td {
+      border: 1px solid #444;
+      padding: 0.5rem 1rem;
+      text-align: left;
+    }
+    th {
+      background-color: #0557a9;
+      color: white;
+    }
+    form {
+      max-width: 700px;
+      background: #1e1e1e;
+      padding: 1rem 1.5rem 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgb(0 0 0 / 0.8);
+      margin-bottom: 3rem;
+      color: #ccc;
+    }
+    label {
+      display: block;
+      margin: 1rem 0 0.25rem;
+      font-weight: 600;
+      color: #ddd;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.5rem;
+      border-radius: 4px;
+      border: 1px solid #555;
+      background-color: #222;
+      color: #eee;
+      font-size: 1rem;
+      box-sizing: border-box;
+      transition: border-color 0.3s ease;
+      font-family: inherit;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="password"]:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #58a6ff;
+      outline: none;
+      background-color: #292929;
+    }
+    button, input[type="submit"], input[type="reset"] {
+      background-color: #58a6ff;
+      color: #121212;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      margin-top: 1rem;
+      border-radius: 4px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-family: inherit;
+    }
+    button:hover, input[type="submit"]:hover, input[type="reset"]:hover {
+      background-color: #f99d00;
+      color: white;
+    }
+    .section-block {
+      background: #1e1e1e;
+      padding: 1rem 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgb(0 0 0 / 0.7);
+    }
+    .inline-demo > * {
+      margin-right: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    audio, video {
+      max-width: 100%;
+      margin-top: 0.5rem;
+      border-radius: 8px;
+      outline-offset: -4px;
+      background: #000;
+      box-shadow: 0 0 10px #000000aa;
+    }
+    figure {
+      max-width: 400px;
+      margin: 1rem 0;
+      padding: 0;
+    }
+    figcaption {
+      font-size: 0.9rem;
+      color: #888;
+      margin-top: 0.25rem;
+    }
+    nav a {
+      color: #58a6ff;
+    }
+    nav {
+      background:#0c2e61;
+      padding: 10px;
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgb(0 40 100 / 0.7);
+    }
+    nav a:hover {
+      color: #90c7ff;
+    }
+    div, span {
+      color: inherit;
+    }
+    div {
+      background: #0b3e6f;
+      color: #e0e0e0;
+      padding: 1rem;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+    }
+    span {
+      background: #a67c00;
+      padding: 0.25rem 0.5rem;
+      border-radius: 3px;
+      color: #fff;
+    }
+    footer {
+      background:#222;
+      color:#aaa;
+      padding: 1rem;
+      text-align: center;
+      margin-top: 2rem;
+      border-radius: 6px;
+      box-shadow: inset 0 0 10px #000000bb;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML Learning Page: All HTML Elements</h1>
+    <p>Welcome to this comprehensive HTML learning page! Below you'll find examples and demonstrations of most common HTML elements with explanations. Use this page to explore and understand HTML structure and semantics.</p>
+
+    <section class="section-block" id="text-content">
+      <h2>1. Text Content</h2>
+      <h1>Heading level 1 (h1)</h1>
+      <h2>Heading level 2 (h2)</h2>
+      <h3>Heading level 3 (h3)</h3>
+      <h4>Heading level 4 (h4)</h4>
+      <h5>Heading level 5 (h5)</h5>
+      <h6>Heading level 6 (h6)</h6>
+
+      <p>This is a paragraph of text. Paragraphs are blocks of text separated by margins.</p>
+      <p>
+        This paragraph contains <strong>strong (bold)</strong>, <em>emphasized (italic)</em>,
+        <u>underlined</u>, <del>deleted</del>, <ins>inserted</ins>, and <mark>marked</mark> text.
+      </p>
+      <p>Inline code example: <code>&lt;div&gt;Hello&lt;/div&gt;</code></p>
+      <p>This text contains a <small>small tag</small> and a <sub>subscript</sub> and <sup>superscript</sup> example.</p>
+      <hr />
+      <p>Line break example<br />This is after a line break.</p>
+    </section>
+
+    <section class="section-block" id="links-images">
+      <h2>2. Links and Images</h2>
+      <p><a href="https://www.example.com" target="_blank" rel="noopener noreferrer">This is a link to example.com</a></p>
+      <p><a href="#text-content">Jump to Text Content section</a></p>
+
+      <figure>
+        <img src="https://via.placeholder.com/300x150.png?text=Sample+Image" alt="Sample placeholder image" width="300" height="150" />
+        <figcaption>Figure 1: Sample placeholder image with figcaption.</figcaption>
+      </figure>
+    </section>
+
+    <section class="section-block" id="lists">
+      <h2>3. Lists</h2>
+
+      <h3>Unordered List</h3>
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2
+          <ul>
+            <li>Sub-item 2a</li>
+            <li>Sub-item 2b</li>
+          </ul>
+        </li>
+        <li>Item 3</li>
+      </ul>
+
+      <h3>Ordered List</h3>
+      <ol type="1">
+        <li>First ordered item</li>
+        <li>Second ordered item
+          <ol type="a">
+            <li>Sub-item a</li>
+            <li>Sub-item b</li>
+          </ol>
+        </li>
+        <li>Third ordered item</li>
+      </ol>
+
+      <h3>Description List (Definition List)</h3>
+      <dl>
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language</dd>
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets</dd>
+      </dl>
+    </section>
+
+    <section class="section-block" id="tables">
+      <h2>4. Tables</h2>
+      <table>
+        <caption>Example Table: Fruits and Prices</caption>
+        <thead>
+          <tr>
+            <th>Fruit</th>
+            <th>Color</th>
+            <th>Price per pound</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Apple</td>
+            <td>Red</td>
+            <td>$1.20</td>
+          </tr>
+          <tr>
+            <td>Banana</td>
+            <td>Yellow</td>
+            <td>$0.50</td>
+          </tr>
+          <tr>
+            <td>Cherry</td>
+            <td>Red</td>
+            <td>$3.00</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3">Prices are approximate</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <section class="section-block" id="forms">
+      <h2>5. Forms</h2>
+      <form action="#" method="get">
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname" placeholder="Enter your first name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="example@email.com" required />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter password" required />
+
+        <label for="bio">Short bio:</label>
+        <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself"></textarea>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+          <option value="" disabled selected>Select gender</option>
+          <option value="female">Female</option>
+          <option value="male">Male</option>
+          <option value="other">Other</option>
+          <option value="notsay">Prefer not to say</option>
+        </select>
+
+        <fieldset>
+          <legend>Choose your favorite colors:</legend>
+          <label><input type="checkbox" name="colors" value="red" /> Red</label>
+          <label><input type="checkbox" name="colors" value="green" /> Green</label>
+          <label><input type="checkbox" name="colors" value="blue" /> Blue</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Choose your subscription:</legend>
+          <label><input type="radio" name="subscription" value="free" checked /> Free</label>
+          <label><input type="radio" name="subscription" value="premium" /> Premium</label>
+        </fieldset>
+
+        <input type="submit" value="Submit" />
+        <input type="reset" value="Reset" />
+      </form>
+    </section>
+
+    <section class="section-block" id="semantic-elements">
+      <h2>6. Semantic Elements</h2>
+
+      <nav>
+        <a href="#text-content" >Text Content</a>
+        <a href="#links-images" >Links & Images</a>
+        <a href="#lists" >Lists</a>
+        <a href="#tables" >Tables</a>
+        <a href="#forms" >Forms</a>
+      </nav>
+
+      <article style="padding: 1rem; border: 1px solid #444; border-radius: 8px; margin-top: 1rem; background:#222;">
+        <h3>Article element</h3>
+        <p>This is an <code>&lt;article&gt;</code> element representing a self-contained composition.</p>
+      </article>
+
+      <section style="background:#222833; padding: 1rem; border-radius: 6px; margin-top: 1rem;">
+        <h3>Section element</h3>
+        <p>This is a <code>&lt;section&gt;</code> element for grouping thematic content.</p>
+      </section>
+
+      <footer>
+        This is a <code>&lt;footer&gt;</code> element - typically for site or page footers.
+      </footer>
+    </section>
+
+    <section class="section-block" id="media">
+      <h2>7. Media Elements</h2>
+
+      <h3>Audio Element</h3>
+      <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+
+      <h3>Video Element</h3>
+      <video controls width="400" poster="https://via.placeholder.com/400x225.png?text=Video+Poster">
+        <source src="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <h3>Additional Photo</h3>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Forest Pathway" width="400" height="267" />
+        <figcaption>Figure 2: A beautiful forest pathway photo.</figcaption>
+      </figure>
+
+      <h3>Additional Video</h3>
+      <video controls width="400" poster="https://via.placeholder.com/400x225.png?text=Another+Video+Poster">
+        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm" />
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <section class="section-block" id="other-elements">
+      <h2>8. Other Elements</h2>
+
+      <div>
+        This is a <code>&lt;div&gt;</code> element with background and padding.
+      </div>
+
+      <span>
+        This is a <code>&lt;span&gt;</code> element with background highlight.
+      </span>
+
+      <hr />
+
+      <p>Horizontal rule: <code>&lt;hr /&gt;</code></p>
+      <p>Line break: <code>&lt;br /&gt;</code></p>
+    </section>
+    
+  </div>
+</body>
+</html>
